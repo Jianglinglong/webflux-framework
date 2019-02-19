@@ -2,6 +2,16 @@
 ###响应对象
 + ```Flux```  集合对象
 + ```Mono<T>``` 单个对象结果或者视图或者无结果
+   + ```Mono<T> create(Consumer<MonoSink<T>> callback)``` 
+   + ``` Mono<Long> delay(Duration duration)```
+   + ```Mono<Long> delay(Duration duration, Scheduler timer)```
+   + ```Mono<T> empty()```
+   + ```Mono<T> error(Throwable error)```
+   + ```Mono<T> error(Supplier<Throwable> errorSupplier)```
+   + ``` Mono<T> first(Mono<? extends T>... monos)```
+   + ```Mono<T> first(Iterable<? extends Mono<? extends T>> monos)```
+   + ```Mono<T> from(Publisher<? extends T> source)```
+   + ``````
 ###router
 + ```RouterFunction```
    + 函数式统一配置request映射到```HandlerFunction```
